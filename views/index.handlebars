@@ -1,20 +1,30 @@
-<h2>Ingredients</h2>
+<h2>Ingredients Not Yet Used</h2>
 
 <ul>
   {{#each ingredients}}
-    <p>Ingredient: {{ingredient_name}}
-      	<button class="change-used" data-id="{{id}}" data-state="{{used}}">
-		{{#if used}}Use Ingredient{{else}}Add Back to Queue{{/if}}
-	</button>
+    {{#unless used}}
+    {{> ingredients/ingredient-block used=true}}
+    {{/unless}}
   {{/each}}
+</ul>
 
-  </ul>
+
+<h2>Ingredients Used</h2>
+
+<ul>
+  {{#each ingredients}}
+    {{#if used}}
+      {{> ingredients/ingredient-block used=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
 
 <h2>Add an Ingredient</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ingredient-form"Ingredient Name:</label>
+    <label for="ingredient-form"> Ingredient Name: </label>
     <input type="text" id="ingredient-form" name="name">
   </div>
 

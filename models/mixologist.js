@@ -16,7 +16,12 @@ var mixologist = {
       orm.update("ingredients", objColVals, condition, function(res) {
         cb(res);
       });
-    }
+    },
+    delete: function(condition, cb) {
+    orm.delete("ingredients", condition, function(res) {
+      cb(res);
+    });
+  }
   };
 
   module.exports = mixologist;

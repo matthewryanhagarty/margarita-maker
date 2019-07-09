@@ -6,7 +6,7 @@ CREATE TABLE ingredients
 (
     id INT NOT NULL AUTO_INCREMENT,
     ingredient_name VARCHAR(50) NOT NULL,
-    used BOOLEAN,
+    used BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
 
