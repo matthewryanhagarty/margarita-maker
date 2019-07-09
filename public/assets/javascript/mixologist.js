@@ -25,7 +25,6 @@ $(function() {
   
       var newIngredient = {
         ingredient_name: $("#ingredient-form").val().trim(),
-        used: false,
       };
   
       // Send the POST request.

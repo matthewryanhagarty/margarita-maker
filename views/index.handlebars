@@ -1,32 +1,48 @@
-<div class="container">
+<div class="container-fluid" id="head">
   <div class="row">
-    <div class="col-md-12" style="text-align: center">
+    <div class="col-sm-12" style="text-align: center">
       <img src="/assets/images/margarita.jpg" class="img" id="margarita" alt="margarita">
     </div>
   </div>
   <br>
   <div class="row">
-    <div class="col-md-12" style="text-align: center">
+    <div class="col-sm-12" style="text-align: center">
       <h2>. M A R G A R I T A . M A K E R .</h2>
+      <p>don't forget the most important ingredient ... l o v e.</p>
+    </div>
+  </div>
+<br>
+  <div class="row" style="text-align: center">
+    <div class="col-sm-12">
+    <h5>Add A New Ingredient:</h5>
+    <form class="create-form">
+
+      <div class="form-group">
+        <input type="text" id="ingredient-form" name="name">
+        <br>
+        <br>
+        <button type="submit">Add Ingredient</button>
+        <br>
+      </form>
     </div>
   </div>
 </div>
-  <br>
-<div class="container">
-  <div class="row" id="main">
-    <div class="col-md-6">
+<br>
+<div class="container" id="main">
+  <div class="row">
+    <div class="col-sm-6" style="text-align: center">
       <h5>Ingredients Not Yet Used:</h5>
       <br>
-      <ul>
+      <div>
         {{#each ingredients}}
           {{#unless used}}
           {{> ingredients/ingredient-block used=true}}
           <br>
           {{/unless}}
         {{/each}}
-      </ul>
+      </div>
     </div>
-		<div class="col-md-6">
+		<div class="col-sm-6" style="text-align: center">
       <h5>Ingredients Used:</h5>
       <br>
       <ul>
@@ -37,23 +53,6 @@
           {{/if}}
         {{/each}}
       </ul>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-
-    <h2>Add an Ingredient</h2>
-    <form class="create-form">
-
-      <div class="form-group">
-        <input type="text" id="ingredient-form" name="name">
-        <br>
-        <br>
-        <button type="submit">Add Ingredient</button>
-        <br>
-      </form>
     </div>
   </div>
 </div>

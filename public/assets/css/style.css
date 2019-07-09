@@ -1,8 +1,51 @@
 #margarita {
-    height: 100%;
-    width: 65%;
+    height: 250px;
+    width: 475px;
+}
+
+img {
+    margin-top: 30px;
+}
+
+#head {
+    margin-top: 30px;
 }
 
 #main {
     margin: 0 auto;
+    text-align: center;
+}
+
+#ingredient-form {
+    width: 450px;
+}
+
+.change-used{
+    margin-top: 5px;
+}
+
+.col-sm-6 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(../images/background2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid {
+    background: white;
+    width: 950px !important;
+    margin-bottom: 40px;
+    border-style: solid;
+    border-width: 1px;
 }
